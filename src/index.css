@@ -1,0 +1,384 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+/* Custom animations */
+@layer utilities {
+  .animate-slide-down {
+    animation: slideDown 0.35s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.frame-box {
+  --offset-left: -20px;
+  --offset-top: -20px;
+  --offset-bottom: -20px;
+  position: relative;
+}
+
+/* Base style */
+.line-top,
+.line-vertical,
+.line-bottom {
+  position: absolute;
+  background-color: #F28C28;
+
+}
+
+/* ┌──── TOP (LEFT → RIGHT) */
+.line-top {
+  top: var(--offset-top);
+  left: var(--offset-left);
+  height: 2px;
+  width: 150px;       /* final width */
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: drawTop 0.6s ease forwards;
+}
+
+/* │    VERTICAL (auto height) */
+.line-vertical {
+  top: var(--offset-top);
+  left: var(--offset-left);
+  width: 2px;
+  height: calc(100% + var(--offset-bottom)); /* AUTO height */
+  transform-origin: top;
+  transform: scaleY(0);
+  animation: drawVertical 0.9s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* └──── BOTTOM (LEFT → RIGHT) */
+.line-bottom {
+  bottom: var(--offset-bottom);
+  left: var(--offset-left);
+  height: 2px;
+  width: 180px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: drawBottom 0.6s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* Keyframes using scale instead of width/height */
+@keyframes drawTop {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes drawVertical {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+/* @keyframes drawBottom {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+} */
+.card-border {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+.group:hover .card-border {
+  stroke-dashoffset: 0;
+}
+
+/* ---------------------------------------- */
+
+
+@layer base {
+  :root {
+    /* Premium White/Black/Gold Theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 220 9% 20%;          /* Tailwind gray-800 */
+--primary-foreground: 0 0% 98%;
+
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.5rem;
+
+    /* Premium Design Tokens */
+    --gold: 45 100% 51%;
+    --gold-muted: 45 80% 60%;
+    --gold-light: 45 100% 96%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 10%) 0%, hsl(0 0% 20%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(45 80% 60%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-elegant: linear-gradient(135deg, hsl(0 0% 10%) 0%, hsl(0 0% 25%) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.1);
+    --shadow-gold: 0 10px 30px -10px hsl(45 100% 51% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 45 100% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Responsive Typography */
+  h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+    line-height: 1.6;
+  }
+
+  /* Container Responsive Padding */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
+
+.card-border {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+.group:hover .card-border {
+  stroke-dashoffset: 0;
+}
+
+
+/* Shine sweep animation */
+@keyframes sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+/* Border glow animation */
+@keyframes borderGlow {
+  0% { stroke-dashoffset: 320; }
+  100% { stroke-dashoffset: 0; }
+}
+/* Smooth 3D tilt parallax */
+.parallax-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.parallax-inner {
+  transition: transform 0.3s ease;
+}
+
+/* Shine sweep */
+@keyframes shineMove {
+  0% { transform: translateX(-150%) rotate(20deg); }
+  100% { transform: translateX(250%) rotate(20deg); }
+}
+
+/* Glow pulse border */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0px rgba(242,140,40,0.15); }
+  50% { box-shadow: 0 0 22px rgba(242,140,40,0.35); }
+}
+
+
+.factorySwiper .swiper-slide {
+  transform: scale(0.6);
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
+
+.factorySwiper .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.factorySwiper .swiper-slide-prev,
+.factorySwiper .swiper-slide-next {
+  transform: scale(0.8);
+  opacity: 0.9;
+}
+
+.factorySmallSwiper .swiper-slide {
+  opacity: 0.4;
+  transform: scale(0.8);
+  transition: all 0.4s ease-in-out;
+}
+
+.factorySmallSwiper .swiper-slide-active {
+  opacity: 0.9;
+  transform: scale(1);
+}
+/* Make center slide big */
+.factorySlider .swiper-slide-active {
+  transform: scale(1.15) !important;
+  opacity: 1 !important;
+}
+
+/* Next / Previous slides (smaller) */
+.factorySlider .swiper-slide-prev,
+.factorySlider .swiper-slide-next {
+  transform: scale(0.75) !important;
+  opacity: 0.6 !important;
+}
+
+/* All other slides (hidden small) */
+.factorySlider .swiper-slide {
+  transition: all 0.45s ease;
+  opacity: 0.3;
+  transform: scale(0.6);
+}
+
+.torn-mask {
+  -webkit-mask-image: url('https://i.imgur.com/0Z8FQ0K.png');
+  mask-image: url('https://i.imgur.com/0Z8FQ0K.png');
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
+
+
+.title-with-line {
+  position: relative;
+  display: inline-block; /* keeps line next to the text */
+  padding-right: 30px;   /* space for the line */
+}
+
+.title-with-line::after {
+  content: "";
+  position: absolute;
+  top: 60%;             /* centers vertically with text */
+  transform: translateY(-50%);
+  left: 100%;           /* starts right after the text */
+  width: 625px;         /* length of your orange line */
+  height: 6px;          /* thickness */
+  background-color: #F28C28; /* orange color */
+  border-radius: 0;     /* NO rounding */
+}
+
+.marquee-track {
+  display: flex;
+  overflow: hidden;
+  width: max-content; /* Forces container to be as wide as the text content */
+  animation: marquee 30s linear infinite; /* Slower speed (30s) usually looks smoother */
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* Prevents the text from being squashed */
+}
+
+.marquee-item {
+  font-size: 0.600rem;
+  font-weight: 500;
+  color: #4b5563; /* gray-600 */
+  margin: 0 1rem; /* Consistent spacing */
+  letter-spacing: 0.05em;
+  white-space: nowrap; /* Crucial: keeps text on one line */
+}
+
+/* 
+   Moves exactly half the total width.
+   Because Set 1 and Set 2 are identical, -50% looks exactly like 0%.
+*/
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
