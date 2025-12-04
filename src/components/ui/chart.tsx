@@ -1,4 +1,4 @@
-import * as React from "react";
+import {forwardRef,createContext,useContext, useMemo, useId} from "react";
 import * as RechartsPrimitive from "recharts";
 
 import { cn } from "@/lib/utils";
@@ -17,10 +17,10 @@ type ChartContextProps = {
   config: ChartConfig;
 };
 
-const ChartContext = React.createContext<ChartContextProps | null>(null);
+const ChartContext = createContext<ChartContextProps | null>(null);
 
 function useChart() {
-  const context = React.useContext(ChartContext);
+  const context = useContext(ChartContext);
 
   if (!context) {
     throw new Error("useChart must be used within a <ChartContainer />");
@@ -29,14 +29,14 @@ function useChart() {
   return context;
 }
 
-const ChartContainer = React.forwardRef<
+const ChartContainer = forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {
     config: ChartConfig;
     children: React.ComponentProps<typeof RechartsPrimitive.ResponsiveContainer>["children"];
   }
 >(({ id, className, children, config, ...props }, ref) => {
-  const uniqueId = React.useId();
+  const uniqueId = useId();
   const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`;
 
   return (
@@ -89,7 +89,7 @@ ${colorConfig
 
 const ChartTooltip = RechartsPrimitive.Tooltip;
 
-const ChartTooltipContent = React.forwardRef<
+const ChartTooltipContent = forwardRef<
   HTMLDivElement,
   React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
     React.ComponentProps<"div"> & {
@@ -120,7 +120,7 @@ const ChartTooltipContent = React.forwardRef<
   ) => {
     const { config } = useChart();
 
-    const tooltipLabel = React.useMemo(() => {
+    const tooltipLabel = useMemo(() => {
       if (hideLabel || !payload?.length) {
         return null;
       }
@@ -227,7 +227,7 @@ ChartTooltipContent.displayName = "ChartTooltip";
 
 const ChartLegend = RechartsPrimitive.Legend;
 
-const ChartLegendContent = React.forwardRef<
+const ChartLegendContent = forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> &
     Pick<RechartsPrimitive.LegendProps, "payload" | "verticalAlign"> & {
