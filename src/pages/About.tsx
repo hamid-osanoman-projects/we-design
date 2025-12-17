@@ -55,12 +55,12 @@ export default function About() {
                   </div>
                   <h2 className="text-4xl sm:text-5xl font-bold text-gray-600 leading-tight">
                     Crafting <span className="text-[#F28C28]">Inspiring</span> <br /> 
-                    Spaces Since 2009
+                    <span className="text-[#F28C28]">Spaces</span> Since 2009
                   </h2>
                 </div>
 
                 {/* Justified Description */}
-                <p className="text-lg text-gray-600 leading-relaxed text-justify">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed text-justify">
                   WE DESIGN is a premium interior, furniture, and landscape design company based in Oman.
                   We blend creativity and craftsmanship to create elegant, functional, and luxury spaces
                   with complete concept-to-execution solutions. From our headquarters in Barka and office
@@ -72,15 +72,15 @@ export default function About() {
                 <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200">
                   <div className="text-center lg:text-left">
                     <h4 className="text-3xl font-bold text-[#F28C28]">15+</h4>
-                    <p className="text-sm text-gray-500 font-medium">Years Experience</p>
+                    <p className="text-md text-gray-500 font-slim">Years Experience</p>
                   </div>
                   <div className="text-center lg:text-left border-l border-gray-200 pl-4">
                     <h4 className="text-3xl font-bold text-[#F28C28]">500+</h4>
-                    <p className="text-sm text-gray-500 font-medium">Projects Done</p>
+                    <p className="text-md text-gray-500 font-slim">Projects Done</p>
                   </div>
                   <div className="text-center lg:text-left border-l border-gray-200 pl-4">
                     <h4 className="text-3xl font-bold text-[#F28C28]">100%</h4>
-                    <p className="text-sm text-gray-500 font-medium">Client Satisfaction</p>
+                    <p className="text-md text-gray-500 font-slim">Client Satisfaction</p>
                   </div>
                 </div>
 
@@ -141,32 +141,36 @@ export default function About() {
       {/* BLOCK 1 - WE CARE */}
       <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-        {/* LEFT CONTENT */}
-        <div className="space-y-6">
-          <span className="text-[#F28C28] font-semibold tracking-widest text-sm">
-            WE CARE
-          </span>
+       {/* LEFT CONTENT */}
+<div className="space-y-6">
+  {/* WE CARE - Bigger */}
+  <span className="text-[#F28C28] font-bold font-tajawal text-xl sm:text-4xl lg:text-5xl block">
+    WE CARE
+  </span>
 
-          <h3 className="font-tajawal text-4xl font-bold text-gray-600">
-            Elevate Your <span className="text-[#F28C28]">Experience</span>
-          </h3>
+  {/* Elevate Your Experience - Smaller */}
+  <h3 className="font-tajawal text-xl sm:text-2xl font-bold text-gray-600">
+    Elevate Your Experience
+  </h3>
 
-          <p className="text-muted-foreground leading-relaxed text-lg">
-            We invest time understanding our clients before designing. 
-            We deliver tailored solutions—not templates—and accompany 
-            our clients throughout the entire project journey.
-          </p>
+  {/* Paragraph - Bigger and more readable */}
+  <p className="text-muted-foreground leading-relaxed text-lg sm:text-xl">
+    We invest time understanding our clients before designing. 
+    We deliver tailored solutions, not templates, and accompany 
+    our clients throughout the entire project journey.
+  </p>
 
-          {/* Quote section */}
-          <div className="flex items-start gap-4 mt-6">
-            <span className="text-[#F28C28] text-6xl -mt-4 leading-none">“</span>
+  {/* Quote section - Larger quote mark and text */}
+  <div className="flex items-start gap-4 mt-6">
+    <span className="text-[#F28C28] text-7xl sm:text-8xl -mt-4 leading-none">“</span>
 
-            <p className="text-gray-600 italic">
-              Transform your space with thoughtful, client-focused solutions—crafted to suit
-              your lifestyle and elevate everyday living.
-            </p>
-          </div>
-        </div>
+    <p className="text-gray-600 italic text-lg sm:text-xl">
+      Transform your space with thoughtful, client-focused solutions—crafted to suit
+      your lifestyle and elevate everyday living.
+    </p>
+  </div>
+</div>
+
 
         {/* RIGHT IMAGE WITH ORANGE LINE */}
         <div className="relative">
@@ -207,15 +211,15 @@ export default function About() {
 
         {/* CONTENT */}
         <div className="space-y-6 order-1 lg:order-2 text-left">
-          <span className="text-[#F28C28] font-semibold tracking-widest text-sm">
+          <span className="text-[#F28C28] font-bold font-tajawal text-xl sm:text-4xl lg:text-5xl block">
             WE’RE CREATIVE
           </span>
 
-          <h3 className="font-tajawal text-4xl font-bold text-gray-600">
-            Design With <span className="text-[#F28C28]">Meaning</span>
+          <h3 className="font-tajawal text-xl sm:text-2xl font-bold text-gray-600">
+            Design With Meaning
           </h3>
 
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed text-lg sm:text-xl">
             We blend aesthetics, function, and emotional experience in every design. 
             Our approach creates timeless spaces that inspire and reflect the unique 
             personality of each client.
@@ -223,7 +227,7 @@ export default function About() {
 
           <div className="flex items-start gap-4 mt-6">
             <span className="text-[#F28C28] text-6xl -mt-4 leading-none">“</span>
-            <p className="text-gray-600 italic">
+            <p className="text-gray-600 italic text-lg sm:text-xl">
               Creativity rooted in purpose—crafted to shape the way you live.
             </p>
           </div>
@@ -237,15 +241,15 @@ export default function About() {
 
         {/* CONTENT */}
         <div className="space-y-6">
-          <span className="text-[#F28C28] font-semibold tracking-widest text-sm">
+          <span className="text-[#F28C28] font-bold font-tajawal text-xl sm:text-4xl lg:text-5xl block">
             WE DELIVER
           </span>
 
-          <h3 className="font-tajawal text-4xl font-bold text-gray-600">
-            Excellence in <span className="text-[#F28C28]">Execution</span>
+          <h3 className="font-tajawal text-xl sm:text-2xl font-bold text-gray-600">
+            Excellence in Execution
           </h3>
 
-          <p className="text-muted-foreground leading-relaxed text-lg">
+          <p className="text-muted-foreground leading-relaxed text-lg sm:text-xl">
             We plan thoroughly and deliver on time and within budget. 
             With our in-house factory and expert craftsmen, we ensure 
             quality execution from concept to completion.
@@ -253,7 +257,7 @@ export default function About() {
 
           <div className="flex items-start gap-4 mt-6">
             <span className="text-[#F28C28] text-6xl -mt-4 leading-none">“</span>
-            <p className="text-gray-600 italic">
+            <p className="text-gray-600 italic text-lg sm:text-xl">
               Precision, planning, and craftsmanship—your project delivered flawlessly.
             </p>
           </div>
@@ -328,23 +332,24 @@ export default function About() {
     {/* RIGHT – TEXT CONTENT */}
     <div className="space-y-6 text-gray-600">
       <h2 className="font-tajawal text-4xl sm:text-5xl font-bold leading-tight text-gray-600">
-        Factory & Manufacturing Excellence
-      </h2>
+  Factory & <span className="text-[#F28C28]">Manufacturing Excellence</span>
+</h2>
+
 
       <span className="block w-20 h-1 bg-[#F28C28] rounded-full"></span>
 
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-gray-600 leading-relaxed text-lg sm:text-xl">
         Our state-of-the-art factory in Barka, established in 2009, is equipped
-        with cutting-edge CNC machinery and advanced woodworking tools—delivering
+        with cutting-edge machinery and advanced woodworking tools—delivering
         unmatched precision and craftsmanship.
       </p>
 
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-gray-600 leading-relaxed text-lg sm:text-xl">
         From wardrobes and kitchens to custom furniture, doors, and large-scale
         joinery, we provide complete manufacturing solutions trusted across Oman.
       </p>
 
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-gray-600 leading-relaxed text-lg sm:text-xl">
         With more than 15 years of expertise, WE DESIGN stands for quality,
         innovation, and reliability in the interior design & furniture industry.
       </p>
@@ -363,12 +368,12 @@ export default function About() {
 
     {/* LEFT SIDE TEXT */}
     <div>
-      <p className="text-[#F28C28] font-semibold tracking-wide mb-3">
-        TRANSFORM HOME TODAY!
+      <p className="text-[#F28C28] text-lg font-semibold tracking-wide mb-3">
+        TRANSFORM <span className="text-gray-600">HOME TODAY!</span> 
       </p>
 
-      <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-600">
-        Why Choose Us?
+      <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-gray-600">
+        Why Choose <span className="text-[#F28C28]">Us?</span>
       </h2>
 
       <ul className="space-y-6 text-gray-600">
@@ -384,7 +389,7 @@ export default function About() {
               {String(i + 1).padStart(2, "0")}
             </div>
 
-            <span className="text-lg font-medium">
+            <span className="text-lg sm:text-xl font-medium">
               {item}
             </span>
           </li>

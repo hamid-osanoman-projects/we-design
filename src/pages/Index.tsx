@@ -16,6 +16,22 @@ import serviceFurniture from "@/assets/service-furniture.jpg";
 import projectVilla from "@/assets/project-villa.jpg";
 import ClientsMarquee from "@/components/ClientMarqee";
 import { OurProcess } from "@/components/OurProcess";
+import { ServicesSlider } from "@/components/ServicesSlider";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import servicePlanning from "@/assets/service-space-planning.jpg";
+import serviceConstruction from "@/assets/service-construction-project-execution.jpg";
+import { Navigation, Autoplay } from "swiper/modules";
+import serviceInterior from "@/assets/service-interior-architecture.jpg";
+import serviceFitout from "@/assets/service-fitout.jpg";
+import serviceWardrobes from "@/assets/service-wardrobes.jpg";
+import serviceLighting from "@/assets/service-lighting.jpg";
+import serviceBathroom from "@/assets/service-bathroom.jpg";
+import serviceFlooring from "@/assets/service-flooring.jpg";
+import serviceLandscape from "@/assets/service-landscape.jpg";
+
 
 
 // Sample clients for marquee
@@ -44,22 +60,52 @@ export default function Index() {
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="space-y-4 sm:space-y-6">
-                <h2 className="font-tajawal text-3xl sm:text-4xl lg:text-5xl font-bold">
-                  Crafting Inspiring Spaces Since 2009
-                </h2>
-                <p className="text-base sm:text-lg leading-relaxed text-muted-foreground font-tajawal">
-                  WE DESIGN blends creativity and craftsmanship to create inspiring interiors. 
-                  From concept and space planning to in-house CNC manufacturing and turnkey delivery, 
-                  we deliver premium interior design and custom furniture solutions for homes, offices, 
-                  and commercial spaces across Muscat and Oman.
-                </p>
-                <Link to="/about" className="block pt-4 sm:pt-6 lg:pt-8 text-gray-600">
-                  <Button variant="outline" size="lg" className="group font-tajawal text-gray-600"> 
-                    Learn More About Us
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
+  <h2 className="font-tajawal text-3xl sm:text-4xl lg:text-5xl font-bold">
+  Crafting Inspiring <span className="text-[#F28C28]">Spaces Since 2009</span>
+</h2>
+
+
+
+  <p className="text-lg sm:text-xl leading-relaxed text-muted-foreground font-tajawal">
+    WE DESIGN is a Muscat-based interior design and construction company serving residential,
+    commercial, and corporate clients across Oman. Our head office is located in Al Khuwair,
+    Muscat, with an in-house joinery and custom furniture factory in Barka.
+    <br />
+    <br />
+    We specialize in interior design, construction, turnkey fit-out solutions, and bespoke
+    furniture manufacturing. From concept design to execution, our team delivers high-quality
+    craftsmanship, functional spaces, and timeless designs tailored to each client’s needs.
+  </p>
+  {/* <p className="text-base sm:text-lg leading-relaxed text-muted-foreground font-tajawal">
+    
+  </p> */}
+  {/* <p className="text-sm text-[#F28C28] font-tajawal">
+  Interior Design&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Construction&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Fit-Out&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Custom Furniture&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Joinery Works
+</p> */}
+<p className="text-md text-[#F28C28] font-tajawal flex flex-wrap gap-x-2">
+  <span>Interior Design</span>
+  <span>|</span>
+  <span>Construction</span>
+  <span>|</span>
+  <span>Fit-Out</span>
+  <span>|</span>
+  <span>Custom Furniture</span>
+  <span>|</span>
+  <span>Joinery Works</span>
+</p>
+
+
+
+
+
+  <Link to="/about" className="block pt-4 sm:pt-6 lg:pt-8 text-gray-600">
+    <Button variant="outline" size="lg" className="group font-tajawal text-gray-600">
+      Learn More About Us
+      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+    </Button>
+  </Link>
+</div>
+
 
               <div className="relative h-[300px] sm:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-elegant">
                 <img
@@ -76,36 +122,159 @@ export default function Index() {
         {/* <ClientsMarquee clients={clients} /> */}
 
         {/* Services */}
-        <section className="py-12 sm:py-16 lg:py-20 font-tajawal">
-          <div className="container mx-auto">
-            <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-600">
-                Premium Interior & Furniture Solutions
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-                From interior architecture to custom CNC joinery — complete design and manufacturing solutions in Oman
-              </p>
-            </div>
+<section className="py-12 sm:py-16 lg:py-20 font-tajawal">
+  <div className="container mx-auto">
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              <ServiceCard
-                title="Interior Architecture & Fit-Out"
-                description="Complete interior design, space planning, and turnkey fit-out execution for residential and commercial projects in Muscat"
-                image={projectVilla}
-              />
-              <ServiceCard
-                title="Custom Furniture & Joinery"
-                description="Precision CNC-manufactured furniture, wardrobes, kitchens, and bespoke joinery from our Barka factory"
-                image={serviceFurniture}
-              />
-              <ServiceCard
-                title="Landscape Design"
-                description="Outdoor living design and garden planning for residential and commercial properties across Oman"
-                image={serviceKitchen}
-              />
-            </div>
-          </div>
-        </section>
+    {/* Title */}
+    <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-600">
+        Premium Interior <span className="text-[#F28C28]">& Furniture Solutions</span>
+      </h2>
+
+      <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+        From interior architecture to custom joinery — complete design and manufacturing solutions in Oman
+      </p>
+    </div>
+
+    {/* Slider Wrapper */}
+    <div className="relative">
+
+      {/* Left Arrow */}
+      <button className="services-prev absolute -left-4 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md p-2 rounded-full hover:bg-[#F28C28] hover:text-white transition">
+        <ChevronLeft size={22} />
+      </button>
+
+      {/* Right Arrow */}
+      <button className="services-next absolute -right-4 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md p-2 rounded-full hover:bg-[#F28C28] hover:text-white transition">
+        <ChevronRight size={22} />
+      </button>
+
+      {/* swiper */}
+      <Swiper
+  modules={[Navigation, Autoplay]}
+  navigation={{
+    prevEl: ".services-prev",
+    nextEl: ".services-next",
+  }}
+  autoplay={{
+    delay: 3000,
+    disableOnInteraction: false,
+  }}
+  spaceBetween={24}
+  slidesPerView={1.1}
+  breakpoints={{
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }}
+>
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Interior Architecture"
+        description="Complete interior design, drawings, specifications, and material selection for residential and commercial projects."
+        image={serviceInterior}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Space Planning"
+        description="Functional and aesthetic layouts that optimize flow, efficiency, and spatial harmony."
+        image={servicePlanning}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Remodeling & Fit-Out"
+        description="Turnkey fit-out execution from demolition to final handover with strict quality control."
+        image={serviceFitout}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Custom Furniture & Joinery"
+        description="Bespoke furniture, wardrobes, and joinery crafted in our Barka production facility."
+        image={serviceFurniture}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Kitchens & Wardrobes"
+        description="Premium kitchen cabinetry and customized wardrobes with expert installation."
+        image={serviceWardrobes}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Lighting & Ceilings"
+        description="Decorative ceilings and integrated lighting systems to enhance interior ambience."
+        image={serviceLighting}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Bathroom & Kitchen Design"
+        description="Complete bathroom and kitchen design with layouts, materials, fixtures, and 3D visualization."
+        image={serviceBathroom}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Flooring Solutions"
+        description="Hardwood, marble, tiles, and decorative flooring for residential and commercial interiors."
+        image={serviceFlooring}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Landscape Design"
+        description="Outdoor living design, garden planning, and complete landscape development."
+        image={serviceLandscape}
+      />
+    </Link>
+  </SwiperSlide>
+
+  <SwiperSlide>
+    <Link to="/services">
+      <ServiceCard
+        title="Construction & Project Execution"
+        description="End-to-end construction, MEP coordination, and complete project management across Oman."
+        image={serviceConstruction}
+      />
+    </Link>
+  </SwiperSlide>
+      </Swiper>
+
+    </div>
+
+  </div>
+</section>
+
+
+
 
         
 
@@ -113,10 +282,15 @@ export default function Index() {
         <section className="py-12 sm:py-16 lg:py-20 bg-muted/20 font-tajawal">
           <div className="container mx-auto"> 
             <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+              {/* <h2 className="font-tajawal text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-600">
+                In-House Furniture Factory
+              </h2> */}
               <h2 className="font-tajawal text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-600">
-                In-House CNC Furniture Factory
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+  In-House <span className="text-[#F28C28]">Furniture Factory</span>
+</h2>
+
+
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
                 Established in 2009, our state-of-the-art manufacturing facility in Barka delivers precision woodwork with exceptional quality
               </p>
             </div>
@@ -129,7 +303,7 @@ export default function Index() {
                     <div className="relative h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-elegant group">
                       <img
                         src={factoryCNC}
-                        alt="CNC Furniture Factory Barka Oman - Advanced machinery"
+                        alt="Furniture Factory Barka Oman - Advanced machinery"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -147,7 +321,7 @@ export default function Index() {
                     <div className="relative h-36 sm:h-40 lg:h-48 rounded-2xl overflow-hidden shadow-elegant group">
                       <img
                         src={factoryMachinery}
-                        alt="CNC Machinery Woodwork Factory - Precision cutting"
+                        alt="Machinery Woodwork Factory"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -168,8 +342,8 @@ export default function Index() {
               <div className="space-y-6 lg:space-y-8 order-1 lg:order-2 font-tajawal">
                 {[
                   {
-                    title: "Advanced CNC Technology",
-                    desc: "Precision manufacturing with state-of-the-art CNC machines, lipping equipment, and beam saws",
+                    title: "Advanced Technology",
+                    desc: "Precision manufacturing with state-of-the-art machines, lipping equipment, and beam saws",
                   },
                   {
                     title: "Complete Woodwork Solutions",
@@ -186,8 +360,8 @@ export default function Index() {
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-card rounded-lg border border-border/50 hover:border-[#F28C28]/50 transition-colors">
                     <div>
-                      <h3 className="font-semibold text-base sm:text-lg mb-1">{item.title}</h3>
-                      <p className="text-muted-foreground text-xs sm:text-sm">{item.desc}</p>
+                      <h3 className="font-semibold text-lg sm:text-xl mb-1">{item.title}</h3>
+                      <p className="text-muted-foreground text-md sm:text-lg">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -209,8 +383,10 @@ export default function Index() {
           <div className="container mx-auto">
             <div className="text-center mb-8 sm:mb-10 lg:mb-12">
               <h2 className="font-tajawal text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-600">
-                Featured Interior Design Projects
-              </h2>
+  Featured Interior{" "}
+  <span className="text-[#F28C28]">Projects</span>
+</h2>
+
               <p className="text-base sm:text-lg text-muted-foreground px-4 font-tajawal">
                 Explore our portfolio of luxury interior and custom furniture projects across Muscat and Oman
               </p>
@@ -225,13 +401,13 @@ export default function Index() {
               <ProjectCard
                 title="Corporate Office Fit-Out"
                 location="Ghubra, Muscat"
-                description="Modern office space design with custom CNC workstations, meeting rooms, and premium joinery"
+                description="Modern office space design with custom workstations, meeting rooms, and premium joinery"
                 image={aboutOffice}
               />
               <ProjectCard
                 title="Premium Kitchen & Wardrobes"
                 location="Barka, Oman"
-                description="Custom kitchen cabinetry and bedroom wardrobes with precision CNC joinery and premium finishes"
+                description="Custom kitchen cabinetry and bedroom wardrobes with precision joinery and premium finishes"
                 image={serviceKitchen}
               />
             </div>

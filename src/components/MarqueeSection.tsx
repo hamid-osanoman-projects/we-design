@@ -14,7 +14,7 @@ const MarqueeSection = () => {
   return (
     // The outer container has the background color and hides the scrollbar
     
-    <div className="w-full  overflow-hidden bg-[#F28C28] py-1">
+    <div className="w-full  overflow-hidden bg-[#F28C28] py-3">
       <div className="marquee-track">
         
         {/* CONTENT SET 1 */}

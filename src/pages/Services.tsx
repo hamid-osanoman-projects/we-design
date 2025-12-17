@@ -11,6 +11,7 @@ import serviceBathroom from "@/assets/service-bathroom.jpg";
 import serviceFlooring from "@/assets/service-flooring.jpg";
 import serviceLandscape from "@/assets/service-landscape.jpg";
 import MarqueeSection from "@/components/MarqueeSection";
+import serviceConstruction from "@/assets/service-construction-project-execution.jpg";
 
 export default function Services() {
   return (
@@ -20,33 +21,33 @@ export default function Services() {
       <main className="flex-1 pt-20">
         
 
-     
-
 
         {/* Services – Style Layout */}
 <section className="py-16 lg:py-24 bg-muted/20">
   <div className="container mx-auto  space-y-10">
 
     {/* Section Title */}
-    <div>
-      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-600 title-with-line ">
-        Premium Services Tailored for Every Space
-      </h2>
-      <p className="mt-3 text-muted-foreground ">
-        From interior architecture to landscaping, our full-suite design and execution
-        services ensure refined aesthetics and lasting quality.
-      </p>
-    </div>
+    <div className="flex items-center mb-6 gap-4">
+  <h2 className="text-4xl sm:text-5xl font-tajawal font-bold tracking-tight text-gray-600">
+    Premium Services Tailored <span className="text-[#F28C28]">for Every Space</span>
+  </h2>
+  <div className="flex-1 h-1 bg-[#F28C28] rounded"></div>
+</div>
+<p className="mt-3 text-muted-foreground text-lgfont-tajawal">
+  From interior architecture to landscaping, our full-suite design and execution
+  services ensure refined aesthetics and lasting quality.
+</p>
+
 
     <MarqueeSection />
 
 
     {/* 1. Interior Architecture */}
-    <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600 space-y-4">
+    <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600 space-y-4 font-tajawal">
       <div>
         <div className="h-1 w-12 bg-[#F28C28] mb-4 "></div>
-        <h3 className="text-2xl font-bold mb-4 text-gray-600">Interior Architecture</h3>
-        <p className="text-muted-foreground mb-6">
+        <h3 className="text-4xl font-bold mb-4 text-gray-600">Interior Architecture</h3>
+        <p className="text-muted-foreground text-lg mb-6">
           Complete interior design services including drawings, specifications,
           material selection, color consulting, and space planning for residential
           and commercial projects.
@@ -55,14 +56,17 @@ export default function Services() {
       <img src={serviceInterior} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
     </div>
 
+    
+
+
     {/* 2. Space Planning – reversed */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
       <img src={servicePlanning} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
 
       <div>
         <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
-        <h3 className="text-2xl font-bold mb-4">Space Planning</h3>
-        <p className="text-muted-foreground mb-6">
+        <h3 className="text-4xl font-tajawal font-bold mb-4">Space Planning</h3>
+        <p className="text-muted-foreground mb-6 font-tajawal text-lg">
           Functional and aesthetic space planning solutions that optimize flow,
           maximize utility, and create harmonious environments.
         </p>
@@ -72,9 +76,9 @@ export default function Services() {
     {/* 3. Remodeling & Fit-Out */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
       <div>
-        <div className="h-1 w-12 bg-[#F28C28] mb-4 "></div>
-        <h3 className="text-2xl font-bold mb-4">Remodeling & Fit-Out</h3>
-        <p className="text-muted-foreground mb-6">
+        <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
+        <h3 className="text-4xl font-tajawal font-bold mb-4">Remodeling & Fit-Out</h3>
+        <p className="text-muted-foreground mb-6 font-tajawal text-lg">
           Turnkey fit-out execution from demolition to final handover, including
           contractor coordination, scheduling, and strict quality control.
         </p>
@@ -87,10 +91,10 @@ export default function Services() {
       <img src={serviceFurniture} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
 
       <div>
-        <div className="h-1 w-12 bg-[#F28C28] mb-4 "></div>
-        <h3 className="text-2xl font-bold mb-4">Custom Furniture & Joinery</h3>
-        <p className="text-muted-foreground mb-6">
-          Precision CNC-manufactured bespoke furniture, wardrobes, wood panels,
+        <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
+        <h3 className="text-4xl font-tajawal font-bold mb-4">Custom Furniture & Joinery</h3>
+        <p className="text-muted-foreground mb-6 font-tajawal text-lg">
+          Precision manufactured bespoke furniture, wardrobes, wood panels,
           and joinery crafted in our Barka production facility.
         </p>
       </div>
@@ -99,9 +103,9 @@ export default function Services() {
     {/* 5. Kitchens & Wardrobes */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
       <div>
-        <div className="h-1 w-12 bg-[#F28C28] mb-4 "></div>
-        <h3 className="text-2xl font-bold mb-4">Kitchens & Wardrobes</h3>
-        <p className="text-muted-foreground mb-6">
+        <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
+        <h3 className="text-4xl font-tajawal font-bold mb-4">Kitchens & Wardrobes</h3>
+        <p className="text-muted-foreground mb-6 font-tajawal text-lg">
           Premium kitchen cabinetry and bedroom wardrobes with fully customized
           layouts, finishes, storage systems, and expert installation.
         </p>
@@ -114,9 +118,9 @@ export default function Services() {
       <img src={serviceLighting} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
 
       <div>
-        <div className="h-1 w-12 bg-[#F28C28] mb-4 "></div>
-        <h3 className="text-2xl font-bold mb-4">Lighting & Ceilings</h3>
-        <p className="text-muted-foreground mb-6">
+        <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
+        <h3 className="text-4xl font-tajawal font-bold mb-4">Lighting & Ceilings</h3>
+        <p className="text-muted-foreground mb-6 font-tajawal text-lg">
           Decorative ceilings, integrated lighting systems, accent lighting,
           and modern fixture selection designed to enhance spatial ambience.
         </p>
@@ -126,9 +130,9 @@ export default function Services() {
     {/* 7. Bathroom & Kitchen Design */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
       <div>
-        <div className="h-1 w-12 bg-[#F28C28] mb-4 "></div>
-        <h3 className="text-2xl font-bold mb-4">Bathroom & Kitchen Design</h3>
-        <p className="text-muted-foreground mb-6">
+        <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
+        <h3 className="text-4xl font-tajawal font-bold mb-4">Bathroom & Kitchen Design</h3>
+        <p className="text-muted-foreground mb-6 font-tajawal text-lg">
           Complete bathroom and kitchen design services including layout planning,
           materials specification, fixture selection, and 3D visualization.
         </p>
@@ -141,9 +145,9 @@ export default function Services() {
       <img src={serviceFlooring} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
 
       <div>
-        <div className="h-1 w-12 bg-[#F28C28] mb-4 "></div>
-        <h3 className="text-2xl font-bold mb-4">Flooring Solutions</h3>
-        <p className="text-muted-foreground mb-6">
+        <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
+        <h3 className="text-4xl font-tajawal font-bold mb-4">Flooring Solutions</h3>
+        <p className="text-muted-foreground mb-6 font-tajawal text-lg">
           Premium flooring options including hardwood, marble, tiles, and
           decorative flooring for residential and commercial interiors.
         </p>
@@ -153,15 +157,35 @@ export default function Services() {
     {/* 9. Landscape Design */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
       <div>
-        <div className="h-1 w-12 bg-[#F28C28] mb-4 "></div>
-        <h3 className="text-2xl font-bold mb-4">Landscape Design</h3>
-        <p className="text-muted-foreground mb-6">
+        <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
+        <h3 className="text-4xl font-tajawal font-bold mb-4">Landscape Design</h3>
+        <p className="text-muted-foreground mb-6 font-tajawal text-lg">
           Outdoor living design, hardscaping, planting plans, garden layouts,
           and complete landscape development for homes and commercial properties.
         </p>
       </div>
       <img src={serviceLandscape} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
     </div>
+
+    {/* 10. Construction & Project Execution – reversed */}
+<div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
+  <img
+    src={serviceConstruction}
+    className="rounded-lg shadow-lg object-cover w-full h-[340px]"
+  />
+
+  <div>
+    <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
+    <h3 className="text-4xl font-tajawal font-bold mb-4">
+      Construction & Project Execution
+    </h3>
+    <p className="text-muted-foreground mb-6 font-tajawal text-lg">
+      End-to-end construction services including civil works, structural
+      execution, MEP coordination, and complete project management for
+      residential and commercial developments across Oman.
+    </p>
+  </div>
+</div>
 
   </div>
 </section>
@@ -220,7 +244,7 @@ export default function Services() {
 
 {/* RIGHT SIDE – PROCESS STEPS */}
 <div>
-  <h2 className="font-tajawal text-4xl font-bold mb-12">Our Process</h2>
+  <h2 className="font-tajawal text-5xl font-bold mb-12">Our Process</h2>
 
   <div className="space-y-8">
     {[
@@ -237,7 +261,7 @@ export default function Services() {
       {
         step: "03",
         title: "Manufacturing",
-        desc: "Custom furniture and interior components are produced in our CNC factory in Barka with precision craftsmanship."
+        desc: "Custom furniture and interior components are produced in our factory in Barka with precision craftsmanship."
       },
       {
         step: "04",
@@ -253,7 +277,7 @@ export default function Services() {
         </div>
 
         <div>
-          <h3 className="font-tajawal text-xl font-bold mb-1">{item.title}</h3>
+          <h3 className="font-tajawal text-2xl font-bold mb-1">{item.title}</h3>
           <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
         </div>
       </div>

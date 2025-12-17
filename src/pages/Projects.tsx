@@ -69,7 +69,7 @@ export default function Projects() {
                  </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-600 leading-tight">
+              <h1 className="text-4xl sm:text-5xl font-bold font-tajawal text-gray-600 leading-tight">
                 Where Design Meets <br />
                 <span className="text-[#F28C28]">Perfection.</span>
               </h1>

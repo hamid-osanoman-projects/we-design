@@ -14,7 +14,7 @@ export default function FAQ() {
     },
     {
       q: "Do you offer custom furniture?",
-      a: "Yes. Our in-house Barka factory produces wardrobes, kitchens, doors, cabinets, flooring, mouldings, and complete woodwork using CNC and advanced machinery.",
+      a: "Yes. Our in-house Barka factory produces wardrobes, kitchens, doors, cabinets, flooring, mouldings, and complete woodwork using advanced machinery.",
     },
     {
       q: "Can WE DESIGN handle full fit-out work?",
@@ -36,12 +36,13 @@ export default function FAQ() {
 
         {/* HEADER */}
         <div className="text-center mb-12">
-          <h3 className="text-[#F28C28] font-semibold uppercase tracking-wide mb-2">
+          <h3 className="text-[#F28C28] text-5xl font-semibold uppercase tracking-wide mb-2">
             FAQs
           </h3>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-600">
-            Questions? Look here.
-          </h2>
+          <h2 className="text-2xl sm:text-2xl font-bold text-gray-600">
+  Everything You Need to Know.
+</h2>
+
         </div>
 
         {/* FAQ GRID */}
@@ -56,7 +57,7 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex justify-between items-center">
-                  <h4 className="font-semibold text-lg">{item.q}</h4>
+                  <h4 className="font-semibold text-xl">{item.q}</h4>
 
                   {/* ICON */}
                   <span className={`text-[#F28C28] text-2xl font-bold transition-transform duration-300 ${
@@ -84,10 +85,10 @@ export default function FAQ() {
             <div>
               <h3 className="text-xl font-bold mb-2">Have different questions?</h3>
               <p className="opacity-90 mb-6">
-                Our team is here to help with your interior, furniture, or landscape inquiries.
+                Our team is here to help with your interior, construction, furniture, or landscape inquiries.
               </p>
 
-              <a href="mailto:milad@wedesign-om.com">
+              <a href="mailto:info@wedesignoman.com">
                 <button className="bg-white text-[#F28C28] font-semibold px-6 py-3 rounded-xl w-full shadow-md hover:opacity-90 transition">
                   Contact Us
                 </button>
@@ -96,8 +97,8 @@ export default function FAQ() {
 
             <div className="mt-10 bg-white/20 rounded-xl p-5 backdrop-blur-sm">
               <p className="text-sm opacity-90 mb-1">Phone / WhatsApp</p>
-              <h4 className="text-2xl font-bold">+968 98502850</h4>
-              <p className="text-sm mt-1 opacity-80">24/7 Service</p>
+              <h4 className="text-2xl font-bold">+968 71119834</h4>
+              {/* <p className="text-sm mt-1 opacity-80">24/7 Service</p> */}
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ const steps: Step[] = [
   },
   {
     title: "Crafting With Precision",
-    subtitle: "In-house CNC manufacturing & craftsmanship",
+    subtitle: "In-house manufacturing & craftsmanship",
     number: "03",
     image: "https://i.pinimg.com/1200x/11/3f/85/113f854c9a9fcb086e0fef91232d41c2.jpg",
   },
@@ -38,9 +38,14 @@ export function OurProcess() {
   return (
     <section className="py-16 lg:py-20 bg-white font-tajawal">
       <div className="container mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 text-center text-gray-600">
+        {/* <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 text-center text-gray-600">
           Our Process
-        </h2>
+        </h2> */}
+
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 text-center text-gray-600">
+  Our <span className="text-[#F28C28]">Process</span>
+</h2>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (

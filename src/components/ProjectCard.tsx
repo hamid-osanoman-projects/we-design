@@ -51,7 +51,7 @@ export const ProjectCard = ({ title, location, description, image, category, onC
         <h3 className="font-tajawal text-xl sm:text-2xl font-bold text-gray-600 group-hover:text-[#F28C28] transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-sm text-gray-500 line-clamp-2 leading-relaxed font-tajawal">
+        <p className="text-md sm:text-lg text-gray-500 line-clamp-2 leading-relaxed font-tajawal">
           {description}
         </p>
       </div>

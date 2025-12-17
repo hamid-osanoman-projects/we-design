@@ -361,9 +361,9 @@ All colors MUST be HSL.
 }
 
 .marquee-item {
-  font-size: 0.600rem;
+  font-size: 0.800rem;
   font-weight: 500;
-  color: #4b5563; /* gray-600 */
+  color: white; /* gray-600 */
   margin: 0 1rem; /* Consistent spacing */
   letter-spacing: 0.05em;
   white-space: nowrap; /* Crucial: keeps text on one line */

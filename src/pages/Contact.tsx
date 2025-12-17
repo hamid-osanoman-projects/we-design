@@ -19,6 +19,8 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { toast } from "sonner";
+import { Instagram, Facebook, Linkedin } from "lucide-react";
+
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -100,8 +102,10 @@ export default function Contact() {
                 {/* Title */}
                 <div>
                   <h3 className="text-2xl sm:text-4xl font-bold mb-3 text-gray-600">
-                    Get In Touch
-                  </h3>
+  Discuss <span className="text-[#F28C28]">Your Vision</span>
+</h3>
+
+
                   <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                     Ready to transform your space? Contact us today for a
                     consultation.
@@ -120,8 +124,8 @@ export default function Contact() {
                         Office
                       </h4>
                       <p className="text-gray-600 text-sm sm:text-base">
-                        Ghoubra near Bank Muscat <br />
-                        P.O. Box 1127 P.C 130 <br />
+                       ONEIC Head Office Building, 2nd Floor <br />
+                        Al Khuwair St, 133 <br />
                         Muscat, Oman
                       </p>
                     </div>
@@ -141,10 +145,10 @@ export default function Contact() {
                           href="tel:+96898502850"
                           className="hover:text-[#F28C28] transition"
                         >
-                          +968 98502850
+                          +968 71119834
                         </a>
                         <br />
-                        Fax: +968 24499802
+                        tel : +968 24488689
                       </p>
                     </div>
                   </div>
@@ -160,10 +164,10 @@ export default function Contact() {
                       </h4>
                       <p className="text-gray-600 text-sm sm:text-base break-words text-tajawal text-gray-600">
                         <a
-                          href="mailto:milad@wedesign-om.com"
+                          href="mailto:info@wedesignoman.com"
                           className="hover:text-[#F28C28] transition"
                         >
-                          milad@wedesign-om.com
+                          info@wedesignoman.com
                         </a>
                       </p>
                     </div>
@@ -173,15 +177,17 @@ export default function Contact() {
                 {/* MAP */}
                 <div className="rounded-lg overflow-hidden shadow-md h-[260px] sm:h-[300px]">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.084464384087!2d58.40952631498163!3d23.589719684682943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM1JzIzLjAiTiA1OMKwMjQnNDQuOCJF!5e0!3m2!1sen!2som!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.2668020236406!2d58.4185879!3d23.5947626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8e0150c6a7777d%3A0x17722bb898d9d860!2sWe%20Design%20LLC%20-%20Interior%20Design%20%26%20Construction!5e0!3m2!1sen!2som!4v1765870001789!5m2!1sen!2som"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
-                    title="WE DESIGN Office, Muscat Oman"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="We Design LLC - Interior Design & Construction, Muscat Oman"
                   />
                 </div>
+
               </div>
 
               {/* RIGHT SIDE - FORM */}
@@ -203,7 +209,7 @@ export default function Contact() {
                       id="fullName"
                       {...register("fullName")}
                       className="mt-2 border-gray-300 focus:border-[#F28C28]"
-                      placeholder="Abdullah"
+                      placeholder="Meelad"
                     />
                     {errors.fullName && (
                       <p className="text-sm text-red-500 mt-1">
@@ -219,7 +225,7 @@ export default function Contact() {
                       <Input
                         {...register("email")}
                         className="mt-2 border-gray-300 focus:border-[#F28C28]"
-                        placeholder="abdullah@example.com"
+                        placeholder="meelad@example.com"
                       />
                       {errors.email && (
                         <p className="text-sm text-red-500 mt-1">
@@ -252,6 +258,9 @@ export default function Contact() {
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
+                          <SelectItem value="Construction">
+                            Construction
+                          </SelectItem>
                           <SelectItem value="interior">
                             Interior Architecture
                           </SelectItem>
@@ -341,89 +350,41 @@ export default function Contact() {
                       Follow Us On
                     </span>
 
-                    {/* Instagram */}
-                    <a
-                      href="https://instagram.com"
-                      target="_blank"
-                      className="opacity-70 hover:opacity-100 transition color-gray-600"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 
-        0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 
-        0 3 1.346 3 3v10c0 1.654-1.346 
-        3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
-        1.346-3 3-3h10zm-5 3c-2.757 0-5 2.243-5 
-        5s2.243 5 5 5 5-2.243 5-5-2.243-5-5zm0 
-        2c1.654 0 3 1.346 3 3s-1.346 3-3 
-        3-3-1.346-3-3 1.346-3 3-3zm4.5-4a1.5 
-        1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"
-                        />
-                      </svg>
-                    </a>
+                    <div className="flex items-center gap-4">
 
-                    {/* TikTok */}
-                    <a
-                      href="https://tiktok.com"
-                      target="_blank"
-                      className="opacity-70 hover:opacity-100 transition color-gray-600"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M12.525 2h3.098c.132 1.043.49 1.91 1.074 
-        2.602.584.692 1.41 1.14 2.48 1.346v3.157c-.878-.093-1.677-.29-2.398-.593a6.83 
-        6.83 0 0 1-1.893-1.19v7.663c0 1.31-.305 
-        2.474-.914 3.49a6.257 6.257 0 0 1-2.457 
-        2.297c-1.05.556-2.257.833-3.62.833-1.05 
-        0-2.03-.176-2.94-.528a6.364 6.364 0 0 
-        1-2.146-1.42A6.59 6.59 0 0 1 2 16.94c0-1.274.32-2.47.96-3.59a6.664 
-        6.664 0 0 1 2.602-2.468c1.13-.593 2.377-.89 
-        3.74-.89.41 0 .86.035 1.346.105v3.287a3.62 
-        3.62 0 0 0-.686-.07c-.73 0-1.39.17-1.98.51a3.49 
-        3.49 0 0 0-1.346 1.414c-.31.61-.463 1.29-.463 
-        2.04 0 .78.167 1.477.5 2.092.333.616.797 
-        1.093 1.39 1.43.594.34 1.274.51 2.04.51.756 
-        0 1.423-.158 2-.473a3.41 3.41 0 0 0 1.414-1.31c.333-.58.5-1.22.5-1.92V2z"
-                        />
-                      </svg>
-                    </a>
+  {/* Instagram */}
+  <a
+    href="https://instagram.com/wedesign_om/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="opacity-70 hover:opacity-100 transition text-gray-600 hover:text-[#F28C28]"
+  >
+    <Instagram size={18} />
+  </a>
 
-                    {/* Facebook */}
-                    <a
-                      href="https://facebook.com"
-                      target="_blank"
-                      className="opacity-70 hover:opacity-100 transition color-gray-600"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M22 12c0-5.523-4.477-10-10-10S2 
-        6.477 2 12c0 4.991 3.657 9.128 8.438 
-        9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 
-        1.492-3.89 3.777-3.89 1.094 0 2.238.195 
-        2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 
-        1.562v1.875h2.773l-.443 2.89h-2.33V21.88C18.343 
-        21.128 22 16.991 22 12"
-                        />
-                      </svg>
-                    </a>
+
+  {/* Facebook */}
+  <a
+    href="https://facebook.com/wedesignoman"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="opacity-70 hover:opacity-100 transition text-gray-600 hover:text-[#F28C28]"
+  >
+    <Facebook size={18} />
+  </a>
+
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/company/we-design-l-l-c"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="opacity-70 hover:opacity-100 transition text-gray-600 hover:text-[#F28C28]"
+  >
+    <Linkedin size={18} />
+  </a>
+
+</div>
+
                   </div>
                 </div>
               </div>
