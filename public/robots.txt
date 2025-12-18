@@ -13,4 +13,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://wedesign-om.com/sitemap.xml
+# FIX: Use your correct domain here
+Sitemap: https://wedesignoman.com/sitemap.xml
