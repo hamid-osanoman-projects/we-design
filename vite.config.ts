@@ -15,7 +15,17 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    emptyOutDir: true, // Cleans the folder before building
-    sourcemap: false, // Hides your code structure from the public (security)
+    emptyOutDir: true,
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        // This splits external libraries into a separate "vendor" chunk
+        manualChunks: (id) => {
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+        },
+      },
+    },
   },
 });

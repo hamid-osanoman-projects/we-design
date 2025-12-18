@@ -82,13 +82,17 @@ export const HeroCarousel = () => {
             }`}
           >
             {/* Background Image with Ken Burns Zoom Effect */}
+            {/* Background Image with Ken Burns Zoom Effect */}
             <div className="absolute inset-0 overflow-hidden">
               <img
                 src={slide.image}
                 alt={`${slide.title} - WE DESIGN Oman`}
-                className={`w-full h-full object-cover transition-transform duration-[8000ms] ease-out ${
+                // UPDATED LINE BELOW: Removed duration-[8000ms]
+                className={`w-full h-full object-cover transition-transform ease-out ${
                   isActive ? "scale-110" : "scale-100"
                 }`}
+                // NEW LINE ADDED:
+                style={{ transitionDuration: "8000ms" }} 
                 loading={idx === 0 ? "eager" : "lazy"}
               />
             </div>

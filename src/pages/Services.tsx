@@ -11,7 +11,7 @@ import serviceBathroom from "@/assets/service-bathroom.jpg";
 import serviceFlooring from "@/assets/service-flooring.jpg";
 import serviceLandscape from "@/assets/service-landscape.jpg";
 import MarqueeSection from "@/components/MarqueeSection";
-import serviceConstruction from "@/assets/service-construction-project-execution.jpg";
+import serviceConstruction from "@/assets/service-construction-project-execution.webp";
 
 export default function Services() {
   return (

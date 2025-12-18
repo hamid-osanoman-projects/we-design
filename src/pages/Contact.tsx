@@ -101,7 +101,7 @@ export default function Contact() {
               <div className="space-y-8">
                 {/* Title */}
                 <div>
-                  <h3 className="text-2xl sm:text-4xl font-bold mb-3 text-gray-600">
+                  <h3 className="text-3xl sm:text-5xl font-bold mb-3 font-tajawal text-gray-600">
   Discuss <span className="text-[#F28C28]">Your Vision</span>
 </h3>
 
