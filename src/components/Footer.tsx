@@ -125,7 +125,7 @@ const Footer = () => {
     {/* Left Side */}
     <div className="text-center md:text-left">
       <p className="text-primary-foreground/60 text-sm font-inter">
-        © {currentYear} WE DESIGN. All rights reserved.
+        © {currentYear} We Design LLC - Leading Interior Design Company in Oman. All rights reserved.
       </p>
 
       <p className="text-primary-foreground/40 text-[11px] font-inter mt-1">
