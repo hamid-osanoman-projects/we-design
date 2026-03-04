@@ -8,8 +8,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow } from "swiper/modules";
 import FAQ from "@/components/FAQ";
-
-
+import wecare from "@/assets/wecare.jpg"
+import creative from "@/assets/creative.jpg";
+import deliver from "@/assets/deliver.jpg"
 
 export default function About() {
   return (
@@ -175,7 +176,7 @@ export default function About() {
         {/* RIGHT IMAGE WITH ORANGE LINE */}
         <div className="relative">
           <img
-            src="https://i.pinimg.com/1200x/9e/e7/3f/9ee73f3b40daf4c4efa2d1c09eb1b1df.jpg"
+            src={wecare}
             alt="We Care"
             className="rounded-xl shadow-lg object-cover w-full h-[420px]"
           />
@@ -197,7 +198,7 @@ export default function About() {
         {/* FLIP IMAGE LEFT FOR VARIATION */}
         <div className="relative order-2 lg:order-1">
           <img
-            src="https://i.pinimg.com/736x/9b/8a/7b/9b8a7b090ccc3111d8130fb0031e6525.jpg"
+            src={creative}
             alt="We’re Creative"
             className="rounded-xl shadow-lg object-cover w-full h-[420px]"
           />
@@ -266,7 +267,7 @@ export default function About() {
         {/* IMAGE */}
         <div className="relative">
           <img
-            src="https://i.pinimg.com/736x/ec/4a/6d/ec4a6d096079c28431744771029af570.jpg"
+            src={deliver}
             alt="We Deliver"
             className="rounded-xl shadow-lg object-cover w-full h-[420px]"
           />
@@ -400,7 +401,7 @@ export default function About() {
     {/* RIGHT SIDE VIDEO */}
     <div className="rounded-xl overflow-hidden shadow-xl h-96">
       <video
-        src="/videos/From KlickPin CF Pin by Cozy Nest _ Home Decor & Desig on Ваши пины in 2025 _ Interior deisgn Interior architecture design Interior design.mp4"
+        src="/videos/whychoose.mp4"
         autoPlay
         loop
         muted

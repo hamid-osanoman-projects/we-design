@@ -1,17 +1,22 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ServiceCard } from "@/components/ServiceCard";
-import serviceInterior from "@/assets/service-interior-architecture.jpg";
-import servicePlanning from "@/assets/service-space-planning.jpg";
-import serviceFitout from "@/assets/service-fitout.jpg";
-import serviceFurniture from "@/assets/service-furniture.jpg";
-import serviceWardrobes from "@/assets/service-wardrobes.jpg";
-import serviceLighting from "@/assets/service-lighting.jpg";
-import serviceBathroom from "@/assets/service-bathroom.jpg";
-import serviceFlooring from "@/assets/service-flooring.jpg";
-import serviceLandscape from "@/assets/service-landscape.jpg";
 import MarqueeSection from "@/components/MarqueeSection";
 import serviceConstruction from "@/assets/service-construction-project-execution.webp";
+import inspiringspace from "@/assets/inspiringspace.jpg"
+import interiordesign from "@/assets/interiordesign.jpg"
+import spaceplanning from "@/assets/spaceplanning.jpg"
+import remodeling from "@/assets/remodeling.jpg"
+import customefurniture from "@/assets/customfurniture.jpg"
+import wardrobe from "@/assets/wardrobe.jpg";
+import lighting from "@/assets/lighting.jpg";
+import bathroom from "@/assets/bathroom.jpg";
+import flooring from "@/assets/flooring.jpg";
+import landscape from "@/assets/landscape.jpg";
+import featuredInterior from "@/assets/featuredinterior.jpg"
+import Fitout from "@/assets/Fitout.jpg"
+
+
 
 export default function Services() {
   return (
@@ -53,7 +58,7 @@ export default function Services() {
           and commercial projects.
         </p>
       </div>
-      <img src={serviceInterior} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={interiordesign} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
     </div>
 
     
@@ -61,7 +66,7 @@ export default function Services() {
 
     {/* 2. Space Planning – reversed */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
-      <img src={servicePlanning} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={spaceplanning} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
 
       <div>
         <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
@@ -83,12 +88,12 @@ export default function Services() {
           contractor coordination, scheduling, and strict quality control.
         </p>
       </div>
-      <img src={serviceFitout} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={remodeling} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
     </div>
 
     {/* 4. Custom Furniture & Joinery – reversed */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
-      <img src={serviceFurniture} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={customefurniture} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
 
       <div>
         <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
@@ -110,12 +115,12 @@ export default function Services() {
           layouts, finishes, storage systems, and expert installation.
         </p>
       </div>
-      <img src={serviceWardrobes} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={wardrobe} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
     </div>
 
     {/* 6. Lighting & Ceilings – reversed */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
-      <img src={serviceLighting} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={lighting} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
 
       <div>
         <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
@@ -137,12 +142,12 @@ export default function Services() {
           materials specification, fixture selection, and 3D visualization.
         </p>
       </div>
-      <img src={serviceBathroom} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={bathroom} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
     </div>
 
     {/* 8. Flooring Solutions – reversed */}
     <div className="grid lg:grid-cols-2 gap-12 items-center text-gray-600">
-      <img src={serviceFlooring} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={flooring} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
 
       <div>
         <div className="h-1 w-12 bg-[#F28C28] mb-4"></div>
@@ -164,7 +169,7 @@ export default function Services() {
           and complete landscape development for homes and commercial properties.
         </p>
       </div>
-      <img src={serviceLandscape} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
+      <img src={landscape} className="rounded-lg shadow-lg object-cover w-full h-[340px]" />
     </div>
 
     {/* 10. Construction & Project Execution – reversed */}

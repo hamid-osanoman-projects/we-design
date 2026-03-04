@@ -11,8 +11,6 @@ import factoryCNC from "@/assets/factory-cnc-closeup.webp";
 import factoryCraftsmanship from "@/assets/factory-craftsmanship.jpg";
 import factoryMachinery from "@/assets/factory-machinery.jpg";
 import factoryProduction from "@/assets/factory-production.jpg";
-import serviceKitchen from "@/assets/service-kitchen.jpg";
-import serviceFurniture from "@/assets/service-furniture.jpg";
 import projectVilla from "@/assets/project-villa.jpg";
 import ClientsMarquee from "@/components/ClientMarqee";
 import { OurProcess } from "@/components/OurProcess";
@@ -24,15 +22,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import servicePlanning from "@/assets/service-space-planning.jpg";
 import serviceConstruction from "@/assets/service-construction-project-execution.webp";
 import { Navigation, Autoplay } from "swiper/modules";
-import serviceInterior from "@/assets/service-interior-architecture.jpg";
-import serviceFitout from "@/assets/service-fitout.jpg";
-import serviceWardrobes from "@/assets/service-wardrobes.jpg";
-import serviceLighting from "@/assets/service-lighting.jpg";
-import serviceBathroom from "@/assets/service-bathroom.jpg";
-import serviceFlooring from "@/assets/service-flooring.jpg";
-import serviceLandscape from "@/assets/service-landscape.jpg";
-
-
+import inspiringspace from "@/assets/inspiringspace.jpg"
+import interiordesign from "@/assets/interiordesign.jpg"
+import spaceplanning from "@/assets/spaceplanning.jpg"
+import remodeling from "@/assets/remodeling.jpg"
+import customefurniture from "@/assets/customfurniture.jpg"
+import wardrobe from "@/assets/wardrobe.jpg";
+import lighting from "@/assets/lighting.jpg";
+import bathroom from "@/assets/bathroom.jpg";
+import flooring from "@/assets/flooring.jpg";
+import landscape from "@/assets/landscape.jpg";
+import featuredInterior from "@/assets/featuredinterior.jpg"
+import Fitout from "@/assets/Fitout.jpg"
 
 // Sample clients for marquee
 const clients = [
@@ -107,9 +108,9 @@ export default function Index() {
 </div>
 
 
-              <div className="relative h-[300px] sm:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-elegant">
+              <div className="relative h-[350px] sm:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-elegant">
                 <img
-                  src={aboutOffice}
+                  src={inspiringspace}
                   alt="WE DESIGN Interior Design Studio Muscat Oman"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -172,7 +173,7 @@ export default function Index() {
       <ServiceCard
         title="Interior Architecture"
         description="Complete interior design, drawings, specifications, and material selection for residential and commercial projects."
-        image={serviceInterior}
+        image={interiordesign}
       />
     </Link>
   </SwiperSlide>
@@ -182,7 +183,7 @@ export default function Index() {
       <ServiceCard
         title="Space Planning"
         description="Functional and aesthetic layouts that optimize flow, efficiency, and spatial harmony."
-        image={servicePlanning}
+        image={spaceplanning}
       />
     </Link>
   </SwiperSlide>
@@ -192,7 +193,7 @@ export default function Index() {
       <ServiceCard
         title="Remodeling & Fit-Out"
         description="Turnkey fit-out execution from demolition to final handover with strict quality control."
-        image={serviceFitout}
+        image={remodeling}
       />
     </Link>
   </SwiperSlide>
@@ -202,7 +203,7 @@ export default function Index() {
       <ServiceCard
         title="Custom Furniture & Joinery"
         description="Bespoke furniture, wardrobes, and joinery crafted in our Barka production facility."
-        image={serviceFurniture}
+        image={customefurniture}
       />
     </Link>
   </SwiperSlide>
@@ -212,7 +213,7 @@ export default function Index() {
       <ServiceCard
         title="Kitchens & Wardrobes"
         description="Premium kitchen cabinetry and customized wardrobes with expert installation."
-        image={serviceWardrobes}
+        image={wardrobe}
       />
     </Link>
   </SwiperSlide>
@@ -222,7 +223,7 @@ export default function Index() {
       <ServiceCard
         title="Lighting & Ceilings"
         description="Decorative ceilings and integrated lighting systems to enhance interior ambience."
-        image={serviceLighting}
+        image={lighting}
       />
     </Link>
   </SwiperSlide>
@@ -232,7 +233,7 @@ export default function Index() {
       <ServiceCard
         title="Bathroom & Kitchen Design"
         description="Complete bathroom and kitchen design with layouts, materials, fixtures, and 3D visualization."
-        image={serviceBathroom}
+        image={bathroom}
       />
     </Link>
   </SwiperSlide>
@@ -242,7 +243,7 @@ export default function Index() {
       <ServiceCard
         title="Flooring Solutions"
         description="Hardwood, marble, tiles, and decorative flooring for residential and commercial interiors."
-        image={serviceFlooring}
+        image={flooring}
       />
     </Link>
   </SwiperSlide>
@@ -252,7 +253,7 @@ export default function Index() {
       <ServiceCard
         title="Landscape Design"
         description="Outdoor living design, garden planning, and complete landscape development."
-        image={serviceLandscape}
+        image={landscape}
       />
     </Link>
   </SwiperSlide>
@@ -393,22 +394,22 @@ export default function Index() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8 lg:mb-12 font-tajawal text-gray-600">
               <ProjectCard
-                title="Al Mouj Villa Interior"
-                location="Muscat, Oman"
+                title="Interior Project"
+                location="Oman"
                 description="Complete luxury interior design and custom furniture for a premium waterfront villa with modern aesthetics"
-                image={projectVilla}
+                image={featuredInterior}
               />
               <ProjectCard
                 title="Corporate Office Fit-Out"
-                location="Ghubra, Muscat"
+                location="Oman"
                 description="Modern office space design with custom workstations, meeting rooms, and premium joinery"
-                image={aboutOffice}
+                image={Fitout}
               />
               <ProjectCard
                 title="Premium Kitchen & Wardrobes"
-                location="Barka, Oman"
+                location="Oman"
                 description="Custom kitchen cabinetry and bedroom wardrobes with precision joinery and premium finishes"
-                image={serviceKitchen}
+                image={wardrobe}
               />
             </div>
             {/* <div className="text-center flex flex-col sm:flex-row gap-4 justify-center items-center px-4 font-tajawal">

@@ -6,6 +6,9 @@ import heroInterior from "@/assets/hero-interior-architecture.jpg";
 import heroCNC from "@/assets/hero-cnc-factory.jpg";
 import heroFitout from "@/assets/hero-fitout.jpg";
 import heroLandscape from "@/assets/hero-landscape.jpg";
+import fitout from "@/assets/Fitout.jpg";
+import landscapedesign from "@/assets/landscapedesign.jpg"
+import interior from "@/assets/interior.jpg"
 
 const slides = [
   {
@@ -13,7 +16,7 @@ const slides = [
     subtitle: "Transforming spaces with modern & functional concepts.",
     cta: "Request Consultation",
     link: "/contact",
-    image: heroInterior,
+    image: interior,
   },
   {
     title: "Custom Furniture & Joinery",
@@ -27,14 +30,14 @@ const slides = [
     subtitle: "Complete project execution from concept to delivery.",
     cta: "View Projects",
     link: "/projects",
-    image: heroFitout,
+    image: fitout,
   },
   {
     title: "Landscape Design",
     subtitle: "Outdoor design for residential & commercial spaces.",
     cta: "Contact Us",
     link: "/contact",
-    image: heroLandscape,
+    image: landscapedesign,
   },
 ];
 

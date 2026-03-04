@@ -189,7 +189,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
               </div>
 
               {/* DETAILS GRID */}
-              <div className="grid md:grid-cols-3 gap-6 pt-6 border-t border-gray-100">
+              {/* <div className="grid md:grid-cols-3 gap-6 pt-6 border-t border-gray-100">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <Layers className="w-4 h-4 text-[#F28C28]" />
@@ -213,7 +213,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
                   </div>
                   <p className="text-sm text-gray-500">2024</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* WHATSAPP BUTTON (Scenario 2) */}
               <div className="pt-4">
