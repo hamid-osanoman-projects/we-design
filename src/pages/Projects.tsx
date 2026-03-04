@@ -5,6 +5,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectModal } from "@/components/ProjectModal";
 import { projects, Project } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react"; 
+import boardroom from "@/assets/boardroom.jpg"
 
 // 1. UPDATED MARQUEE SECTION
 // const MarqueeSection = () => {
@@ -95,7 +96,7 @@ export default function Projects() {
             {/* RIGHT: Featured Project Image */}
             <div className="relative flex justify-center lg:justify-end">
                <img 
-                 src="https://i.pinimg.com/1200x/16/5d/bc/165dbcc7056f19cdf09e708c948d6475.jpg" 
+                 src={boardroom}
                  alt="Featured Project"
                  className="w-full max-w-md rounded-lg shadow-xl object-cover h-[300px]"
                />
@@ -103,7 +104,7 @@ export default function Projects() {
                {/* Featured Card */}
                <div className="absolute bottom-8 -left-4 sm:left-4 bg-white p-5 rounded-lg shadow-2xl max-w-[200px] border-l-4 border-[#F28C28] hidden sm:block">
                   <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Latest Project</p>
-                  <p className="text-gray-600 font-bold leading-snug">Private Villa in Muscat Hills</p>
+                  <p className="text-gray-600 font-bold leading-snug">Modern Boardroom</p>
                   {/* <div className="mt-3 flex items-center text-[#F28C28] text-xs font-bold gap-1 cursor-pointer">
                     VIEW DETAILS <ArrowUpRight className="w-3 h-3" />
                   </div> */}
@@ -161,37 +162,42 @@ export default function Projects() {
     {/* Projects Grid 
         Using 'gap-y-12' to give more vertical breathing room between rows
     */}
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-      {filteredProjects.map((project, index) => (
-        // Adding a staggered fade-in animation for a premium load feel
-        <div 
-          key={project.id} 
-          className="animate-fade-in-up" 
-          style={{ animationDelay: `${index * 100}ms` }}
-        >
-          <ProjectCard 
-            {...project} 
-            onClick={() => setSelectedProject(project)}
-          />
-        </div>
-      ))}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+  {filteredProjects.map((project, index) => (
+    <div 
+      key={project.id} 
+      className="animate-fade-in-up" 
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      <ProjectCard 
+        // We pass the project object directly to match your Project interface
+        key={project.id}
+        title={project.title}
+        location={project.location}
+        description={project.description}
+        image={project.image}
+        category={project.category}
+        onClick={() => setSelectedProject(project)}
+      />
     </div>
+  ))}
+</div>
 
-    {/* Empty State */}
-    {filteredProjects.length === 0 && (
-      <div className="flex flex-col items-center justify-center py-24 text-center">
-        <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-400">
-          <span className="text-2xl">?</span>
-        </div>
-        <p className="text-gray-500 text-lg">No projects found in this category.</p>
-        <button 
-          onClick={() => setActiveCategory("All")}
-          className="mt-4 text-[#F28C28] font-semibold hover:underline"
-        >
-          View all projects
-        </button>
-      </div>
-    )}
+{/* Empty State remains the same */}
+{filteredProjects.length === 0 && (
+  <div className="flex flex-col items-center justify-center py-24 text-center">
+    <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-400">
+      <span className="text-2xl">?</span>
+    </div>
+    <p className="text-gray-500 text-lg">No projects found in this category.</p>
+    <button 
+      onClick={() => setActiveCategory("All")}
+      className="mt-4 text-[#F28C28] font-semibold hover:underline"
+    >
+      View all projects
+    </button>
+  </div>
+)}
 
   </div>
 </section>
